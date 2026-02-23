@@ -1,0 +1,94 @@
+{
+  "name": "securepay-preview",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/securepay-preview/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag",
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/securepay-preview",
+        "main": "libs/securepay-preview/src/index.ts",
+        "tsConfig": "libs/securepay-preview/tsconfig.lib.json",
+        "clean": false,
+        "assets": [
+          "libs/securepay-preview/*.md",
+          "libs/securepay-preview/example/*"
+        ]
+      }
+    },
+    "bundle": {
+      "executor": "@nx/webpack:webpack",
+      "dependsOn": ["build"],
+      "outputs": ["{workspaceRoot}/dist/libs/securepay-preview/bundle"],
+      "options": {
+        "target": "web",
+        "clean":false,
+        "outputPath": "dist/libs/securepay-preview/bundle",
+        "main": "libs/securepay-preview/src/bundle-entry.ts",
+        "tsConfig": "libs/securepay-preview/tsconfig.lib.json",
+        "webpackConfig": "libs/securepay-preview/webpack.config.js"
+      }
+    },
+    "bundle-copy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "shx cp -r dist/libs/securepay-preview/bundle/. dist/libs/securepay-preview && shx rm -r dist/libs/securepay-preview/bundle"
+      },
+      "dependsOn": ["bundle"]
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rimraf dist/libs/securepay-preview"
+      }
+    },
+    "pack": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "node scripts/pack.js --input \"./dist/libs/securepay-preview\""
+          }
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    },
+    "build-styles": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "sass libs/securepay-preview/src/styles.scss dist/libs/securepay-preview/src/styles.css --no-source-map --load-path=node_modules --load-path=libs"
+      }
+    },
+    "build-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run securepay-preview:clean",
+          "nx run securepay-preview:build",
+          "nx run securepay-preview:bundle-copy",
+          "nx run securepay-preview:pack"
+        ]
+      },
+      "dependsOn": ["^build"],
+      "parallel": false,
+      "parallelism": false,
+      "cache": false
+    }
+  }
+}

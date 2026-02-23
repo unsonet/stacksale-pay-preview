@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New project</title>
+  <script src="../securepay-preview.bundle.min.js"></script>
+  <script src="./index.js"></script>
+
+  <link rel="stylesheet" href="../securepay-preview.styles.css">
+
+</head>
+
+<body>
+  <form>
+    <div class="bs-3">
+      <table id="promotion">
+        <tbody>
+          <tr>
+            <td height="150" class="content-cell" style="padding:15px;">
+              <!--<div style="width:150px; height:50px; background:url([-logoURL-])"></div>-->
+              <img class="promotion-image top10 bottom20" alt="Atlantis The Palm" title="Atlantis The Palm" data-src="[-logoURL-]">
+            </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding:0 15px; text-align: center;">
+              <p>
+              <h4 class="promotion-title text-center" style="font-weight:bold;">[-name | No title-]</h4>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding:0 15px;"> <span class="promotion-text">[-promotionText-]</span> </td>
+          </tr>
+          <tr>
+            <td class="content-cell " style="padding:0 15px;"> [-previewOptions-] </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding:0 15px;">
+              <p> <b class="counter-list total"> <span class="key">Total To Pay</span><span class="dots"></span><span class="value"><span class="parameter_currency">[-hotel.currency-]</span> <span class="parameter_amount">[-amount-]</span></span> </b> </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding:0 15px;">
+              <p class="top20"> <label class="glyphicon-checkbox glyphy"> <input type="checkbox" name="acceptT&C"> <span class="label-text">I accept the [-hotel.name-]&nbsp;<a class="termsAndConditionsLink">Terms &amp; Conditions of Payment</a>.</span> </label> </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="text-align:center; padding:0 15px;"> <a href="https://securepay-demo.test.securepay.ae/prepay/[-uuid-]" class="Button payPreAuthButton btn btn-success btn-sm disabled"> Pay <span class="parameter_currency">[-hotel.currency-]</span>&nbsp;<span class="parameter_amount">[-amount-]</span> </a> </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding:0 15px;">
+              <p> For any enquiries, or if you have any concerns about the authenticity of this email, please contact the <span class="contact">[-contactName-]</span> at SecurePay Demo at <a class="email" href="mailto:[-contactEmail-]">[-contactEmail-]</a> or by telephone on <a class="tel" href="tel:[-contactPhone-]">[-contactPhone-]</a>, or see answers to <a href="https://securepay-demo.test.securepay.ae/prepay/[-uuid-]#frequentlyAskedQuestions">Frequently Asked Questions.</a> </p>
+              <p>Kind Regards,<br>SecurePay Demo</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding:15px;"> <span class="footer-text">[-footerText-]</span> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </form>
+</body>
+
+</html>
