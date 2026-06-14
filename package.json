@@ -1,6 +1,6 @@
 {
   "name": "@unsonet/securepay-preview",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "type": "commonjs",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -8,15 +8,15 @@
     "@rmanaf/json-form": "file:D:/Desktop/projects/json-form",
     "jscssp": "github:therealglazou/jscssp",
     "number-format.js": "^2.0.9",
-    "@unsonet/utils": "0.0.1",
     "rrule": "^2.8.1",
     "rxjs": "7.8.2",
     "tslib": "^2.3.0",
     "moment": "^2.30.1",
-    "@unsonet/ngx-bootstrap-select-directive":"0.0.1",
-    "@unsonet/ngx-air-datepicker-directive":"0.0.1",
-    "@unsonet/bootstrap-glyphicons":"0.0.1",
-    "@unsonet/securepay-styles":"0.0.1",
+    "@unsonet/js-utils": "workspace:*",
+    "@unsonet/ngx-bootstrap-select-directive": "workspace:*",
+    "@unsonet/ngx-air-datepicker-directive": "workspace:*",
+    "@unsonet/bootstrap-glyphicons": "workspace:*",
+    "@unsonet/securepay-styles": "workspace:*",
     "bootstrap": "5.3.8",
     "air-datepicker": "link:D:/Desktop/projects/air-datepicker/air-datepicker-v3",
     "bootstrap-select": "link:D:/Desktop/projects/bootstrap-select"
@@ -27,5 +27,4 @@
     "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.102.1"
   }
-
 }

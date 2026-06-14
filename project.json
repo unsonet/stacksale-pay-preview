@@ -5,11 +5,10 @@
   "projectType": "library",
   "release": {
     "version": {
-      "generatorOptions": {
-        "packageRoot": "dist/{projectRoot}",
-        "currentVersionResolver": "git-tag",
-        "fallbackCurrentVersionResolver": "disk"
-      }
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk",
+      "preserveLocalDependencyProtocols": false,
+      "manifestRootsToUpdate": ["dist/{projectRoot}"]
     }
   },
   "tags": [],
@@ -34,7 +33,7 @@
       "outputs": ["{workspaceRoot}/dist/libs/securepay-preview/bundle"],
       "options": {
         "target": "web",
-        "clean":false,
+        "clean": false,
         "outputPath": "dist/libs/securepay-preview/bundle",
         "main": "libs/securepay-preview/src/bundle-entry.ts",
         "tsConfig": "libs/securepay-preview/tsconfig.lib.json",
