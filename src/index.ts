@@ -1,1 +1,1 @@
-export * from './lib/securepay-preview';
+export * from './lib/stacksale-pay-preview';

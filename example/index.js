@@ -1,8 +1,8 @@
 let promotionData = {
   "name": "Test Promotion - Max Attendees",
   "promotionText": "<p>Testing of \"max attendees\" values which is set to 10 per promotion date.</p>",
-  "contactName": "Phil Duhs",
-  "contactEmail": "phil.duhs@securepay.ae",
+  "contactName": "John Doe",
+  "contactEmail": "john.doe@site.com",
   "contactPhone": "+971555555555",
   "footerText": "",
   "customCSS": ".title{color:red}",
@@ -98,7 +98,7 @@ let promotionData = {
   "id": 4770,
   "hotel": {
     "id": 2480,
-    "name": "SecurePay Demo Hotel",
+    "name": "Stacksale Pay Demo Hotel",
     "currency": "AED",
     "currencyFormat": "#,####,##0.00"
   },
@@ -129,11 +129,11 @@ let promotionData = {
   },
   "maxAttendeesPerDate": 10,
   "notifyEmails": [
-    "hotelManager@securepay.ae"
+    "hotelManager@site.com"
   ],
   "blockedDates": {},
   "uuid": "26a416cd-905b-4276-a814-b6c0fd41cd21",
-  "promotionLink": "https://securepay-demo-hotel.dev.securepay.ae:8443/promotion/view/26a416cd-905b-4276-a814-b6c0fd41cd21",
+  "promotionLink": "https://site.com/promotion/view/26a416cd-905b-4276-a814-b6c0fd41cd21",
   "createdBy": {
     "id": 2551,
     "username": "Phil",
@@ -146,7 +146,7 @@ let promotionData = {
 document.addEventListener('DOMContentLoaded', (e) => {
 
 
-  let preview = new SecurePayPreview({
+  let preview = new StacksalePayPreview({
     promotionData,
     previewElement: '#promotion',
     //previewTemplate //The template can also be passed as an html string.

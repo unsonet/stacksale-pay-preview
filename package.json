@@ -1,6 +1,6 @@
 {
-  "name": "@unsonet/securepay-preview",
-  "version": "1.4.1",
+  "name": "@unsonet/stacksale-pay-preview",
+  "version": "1.5.0",
   "type": "commonjs",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -16,7 +16,7 @@
     "@unsonet/ngx-bootstrap-select-directive": "workspace:*",
     "@unsonet/ngx-air-datepicker-directive": "workspace:*",
     "@unsonet/bootstrap-glyphicons": "workspace:*",
-    "@unsonet/securepay-styles": "workspace:*",
+    "@unsonet/stacksale-pay-styles": "workspace:*",
     "bootstrap": "5.3.8",
     "air-datepicker": "link:D:/Desktop/projects/air-datepicker/air-datepicker-v3",
     "bootstrap-select": "link:D:/Desktop/projects/bootstrap-select"

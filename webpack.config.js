@@ -10,11 +10,11 @@ module.exports = composePlugins(withNx(), (config) => {
   config.devtool = 'source-map';
 
   config.output.clean = false;
-  config.output.filename = 'securepay-preview.bundle.min.js';
+  config.output.filename = 'stacksale-pay-preview.bundle.min.js';
 
   config.output.library = {
     type: 'umd',
-    name: 'securepayPreview',
+    name: 'stacksalePayPreview',
   };
 
   config.output.globalObject =
@@ -32,7 +32,7 @@ module.exports = composePlugins(withNx(), (config) => {
       loader: 'ts-loader',
       exclude: /node_modules/,
       options: {
-        configFile: 'libs/securepay-preview/tsconfig.lib.json',
+        configFile: 'libs/stacksale-pay-preview/tsconfig.lib.json',
       },
     },
 
@@ -85,7 +85,7 @@ module.exports = composePlugins(withNx(), (config) => {
   // Отдельный CSS файл
   config.plugins.push(
     new MiniCssExtractPlugin({
-      filename: 'securepay-preview.styles.css',
+      filename: 'stacksale-pay-preview.styles.css',
     })
   );
 

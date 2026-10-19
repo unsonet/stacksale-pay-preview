@@ -1,7 +1,7 @@
 {
-  "name": "securepay-preview",
+  "name": "stacksale-pay-preview",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/securepay-preview/src",
+  "sourceRoot": "libs/stacksale-pay-preview/src",
   "projectType": "library",
   "release": {
     "version": {
@@ -17,40 +17,40 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/securepay-preview",
-        "main": "libs/securepay-preview/src/index.ts",
-        "tsConfig": "libs/securepay-preview/tsconfig.lib.json",
+        "outputPath": "dist/libs/stacksale-pay-preview",
+        "main": "libs/stacksale-pay-preview/src/index.ts",
+        "tsConfig": "libs/stacksale-pay-preview/tsconfig.lib.json",
         "clean": false,
         "assets": [
-          "libs/securepay-preview/*.md",
-          "libs/securepay-preview/example/*"
+          "libs/stacksale-pay-preview/*.md",
+          "libs/stacksale-pay-preview/example/*"
         ]
       }
     },
     "bundle": {
       "executor": "@nx/webpack:webpack",
       "dependsOn": ["build"],
-      "outputs": ["{workspaceRoot}/dist/libs/securepay-preview/bundle"],
+      "outputs": ["{workspaceRoot}/dist/libs/stacksale-pay-preview/bundle"],
       "options": {
         "target": "web",
         "clean": false,
-        "outputPath": "dist/libs/securepay-preview/bundle",
-        "main": "libs/securepay-preview/src/bundle-entry.ts",
-        "tsConfig": "libs/securepay-preview/tsconfig.lib.json",
-        "webpackConfig": "libs/securepay-preview/webpack.config.js"
+        "outputPath": "dist/libs/stacksale-pay-preview/bundle",
+        "main": "libs/stacksale-pay-preview/src/bundle-entry.ts",
+        "tsConfig": "libs/stacksale-pay-preview/tsconfig.lib.json",
+        "webpackConfig": "libs/stacksale-pay-preview/webpack.config.js"
       }
     },
     "bundle-copy": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "shx cp -r dist/libs/securepay-preview/bundle/. dist/libs/securepay-preview && shx rm -r dist/libs/securepay-preview/bundle"
+        "command": "shx cp -r dist/libs/stacksale-pay-preview/bundle/. dist/libs/stacksale-pay-preview && shx rm -r dist/libs/stacksale-pay-preview/bundle"
       },
       "dependsOn": ["bundle"]
     },
     "clean": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "rimraf dist/libs/securepay-preview"
+        "command": "rimraf dist/libs/stacksale-pay-preview"
       }
     },
     "pack": {
@@ -58,7 +58,7 @@
       "options": {
         "commands": [
           {
-            "command": "node scripts/pack.js --input \"./dist/libs/securepay-preview\""
+            "command": "node scripts/pack.js --input \"./dist/libs/stacksale-pay-preview\""
           }
         ]
       }
@@ -71,17 +71,17 @@
     "build-styles": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "sass libs/securepay-preview/src/styles.scss dist/libs/securepay-preview/src/styles.css --no-source-map --load-path=node_modules --load-path=libs"
+        "command": "sass libs/stacksale-pay-preview/src/styles.scss dist/libs/stacksale-pay-preview/src/styles.css --no-source-map --load-path=node_modules --load-path=libs"
       }
     },
     "build-all": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "nx run securepay-preview:clean",
-          "nx run securepay-preview:build",
-          "nx run securepay-preview:bundle-copy",
-          "nx run securepay-preview:pack"
+          "nx run stacksale-pay-preview:clean",
+          "nx run stacksale-pay-preview:build",
+          "nx run stacksale-pay-preview:bundle-copy",
+          "nx run stacksale-pay-preview:pack"
         ]
       },
       "dependsOn": ["^build"],

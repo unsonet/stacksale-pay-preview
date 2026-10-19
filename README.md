@@ -1,11 +1,11 @@
-# SecurePay Preview
+# Stacksale Pay Preview
 
 A library for generating and managing interactive promotion preview forms from a JSON configuration. It dynamically renders a form based on promotion data, handles user inputs, validates answers, and calculates costs.
 
 ## Installation
 
 ```bash
-npm install @unsonet/securepay-preview
+npm install @unsonet/stacksale-pay-preview
 ```
 
 ## Usage
@@ -13,8 +13,8 @@ npm install @unsonet/securepay-preview
 Create a new preview instance by passing a configuration object. The preview will be rendered inside the specified DOM element.
 
 ```javascript
-import { PreviewComponent } from '@unsonet/securepay-preview';
-// or use global variable: window.SecurePayPreview
+import { PreviewComponent } from '@unsonet/stacksale-pay-preview';
+// or use global variable: window.StacksalePayPreview
 
 const preview = new PreviewComponent({
   promotionData,       // Promotion configuration object
@@ -97,7 +97,7 @@ preview.preview.nativeElement.addEventListener('template-submit', (e) => {
 The following example demonstrates creating a preview, handling the accept terms checkbox, and managing the pay button.
 
 ```javascript
-import { PreviewComponent } from '@unsonet/securepay-preview';
+import { PreviewComponent } from '@unsonet/stacksale-pay-preview';
 
 const promotionData = { ... }; // Your promotion JSON
 
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ## Promotion Data Structure
 
-The `promotionData` object defines the entire promotion form, including categories, questions, pricing, and validation. Refer to the type definitions in `@unsonet/securepay-types` for a complete schema.
+The `promotionData` object defines the entire promotion form, including categories, questions, pricing, and validation. Refer to the type definitions in `@unsonet/stacksale-pay-types` for a complete schema.
 
 Key sections:
 - `categories[]` – Each category contains `questions[]`.

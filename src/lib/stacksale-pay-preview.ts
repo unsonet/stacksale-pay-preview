@@ -5,8 +5,8 @@ import format from 'number-format.js';
 import { CSSParser, jscsspStyleRule } from '@unsonet/jscssp';
 import { RRule } from 'rrule'
 
-import { DayOfWeek } from '@unsonet/securepay-types';
-import { ContentType, DisplayMethod, QuestionTypes, SelectionType, TaxType } from '@unsonet/securepay-types/promotions';
+import { DayOfWeek } from '@unsonet/stacksale-pay-types';
+import { ContentType, DisplayMethod, QuestionTypes, SelectionType, TaxType } from '@unsonet/stacksale-pay-types/promotions';
 import { AirDatepickerCore } from '@unsonet/ngx-air-datepicker-directive/core';
 import { BootstrapSelectCore } from '@unsonet/ngx-bootstrap-select-directive/core';
 import { EmailValidators, PhoneValidators } from '@unsonet/ngx-validators/core';
@@ -3566,4 +3566,4 @@ export class PreviewComponent {
 
 }
 
-window["SecurePayPreview"] = PreviewComponent;
+window["StacksalePayPreview"] = PreviewComponent;
